@@ -65,11 +65,11 @@ class SudokuSolver {
 		if (validate.error) return validate;
 
 		//validate input
-		if (value.toString().match(/^[1-9]$/)) {
-			return { error: "Invalid value" };
-		}
-		if (!coordinate.match(/^[a-iA-I][1-9]$/)) {
+		if (!coordinate.match(/^[a-iA-I]{1}[1-9]{1}$/)) {
 			return { error: "Invalid coordinate" }
+		}
+		if (!value.toString().match(/^[1-9]{1}$/)) {
+			return { error: "Invalid value" };
 		}
 		let [row, column] = coordinate.toLowerCase().split("");
 		let columnAsNumber = parseInt(column);
