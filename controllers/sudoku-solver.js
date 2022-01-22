@@ -63,7 +63,7 @@ class SudokuSolver {
 		// valid: true/false conflict: ["row", "column"?, "region"?] valid: true/false
 
 		//validate input
-		if (value < 1 || value > 9) {
+		if (value.toString().match(/^[1-9]$/)) {
 			return { error: "Invalid value" };
 		}
 		if (!coordinate.match(/^[a-zA-Z]\d$/)) {
