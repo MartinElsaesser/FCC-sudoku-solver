@@ -92,11 +92,11 @@ class SudokuSolver {
 			conflict.push("region");
 			valid = false;
 		}
-		if (!this.checkRowPlacement(puzzleString, row, columnAsNumber, value)) {
+		if (!this.checkRowPlacement(puzzleString, row, value)) {
 			conflict.push("row");
 			valid = false;
 		}
-		if (!this.checkColPlacement(puzzleString, row, columnAsNumber, value)) {
+		if (!this.checkColPlacement(puzzleString, columnAsNumber, value)) {
 			conflict.push("column");
 			valid = false;
 		}
