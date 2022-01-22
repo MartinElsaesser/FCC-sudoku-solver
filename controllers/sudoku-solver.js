@@ -72,17 +72,20 @@ class SudokuSolver {
 			return { error: "Invalid value" };
 		}
 		let [row, column] = coordinate.toLowerCase().split("");
+		console.log(row);
 		let columnAsNumber = parseInt(column);
 
 		//value already placed at coordinate, take out value and validate
 		let rows = { a: 1, b: 2, c: 3, d: 4, e: 5, f: 6, g: 7, h: 8, i: 9 }
 		let rowAsNumber = rows[row];
 		let cellI = (rowAsNumber - 1) * 9 + columnAsNumber - 1;
-		if (puzzleString[cellI] == value) {
-			var temp = puzzleString.split('');
-			temp[cellI] = ".";
-			puzzleString = temp.join('');
-		}
+		console.log(puzzleString);
+		// if (puzzleString[cellI] == value) {
+		var temp = puzzleString.split('');
+		temp[cellI] = ".";
+		puzzleString = temp.join('');
+		console.log(puzzleString);
+		// }
 
 
 		//check sudoku
