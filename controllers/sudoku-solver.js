@@ -71,6 +71,10 @@ class SudokuSolver {
 		}
 		let [row, column] = coordinate.toLowerCase().split("");
 		let columnAsNumber = parseInt(column);
+		let validation = this.validate(puzzleString);
+		if (validation.error) {
+			return validation
+		}
 
 		//value already placed at coordinate, take out value and validate
 		let rows = { a: 1, b: 2, c: 3, d: 4, e: 5, f: 6, g: 7, h: 8, i: 9 }
