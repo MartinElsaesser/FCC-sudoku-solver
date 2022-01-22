@@ -100,7 +100,7 @@ class SudokuSolver {
 			valid = false;
 		}
 		if (!this.checkColPlacement(puzzleString, row, columnAsNumber, value)) {
-			conflict.push("col");
+			conflict.push("column");
 			valid = false;
 		}
 		return {
