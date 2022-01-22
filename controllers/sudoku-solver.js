@@ -68,7 +68,7 @@ class SudokuSolver {
 		if (value.toString().match(/^[1-9]$/)) {
 			return { error: "Invalid value" };
 		}
-		if (!coordinate.match(/^[a-zA-Z][1-9]$/)) {
+		if (!coordinate.match(/^[a-iA-I][1-9]$/)) {
 			return { error: "Invalid coordinate" }
 		}
 		let [row, column] = coordinate.toLowerCase().split("");
