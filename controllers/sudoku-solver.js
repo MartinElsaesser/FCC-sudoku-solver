@@ -80,12 +80,12 @@ class SudokuSolver {
 		let rowAsNumber = rows[row];
 		let cellI = (rowAsNumber - 1) * 9 + columnAsNumber - 1;
 		console.log(puzzleString);
-		// if (puzzleString[cellI] == value) {
-		var temp = puzzleString.split('');
-		temp[cellI] = ".";
-		puzzleString = temp.join('');
-		console.log(puzzleString);
-		// }
+		if (puzzleString[cellI] == value) {
+			var temp = puzzleString.split('');
+			temp[cellI] = ".";
+			puzzleString = temp.join('');
+			console.log(puzzleString);
+		}
 
 
 		//check sudoku
